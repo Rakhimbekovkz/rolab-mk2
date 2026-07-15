@@ -35,6 +35,7 @@ section{padding:clamp(46px,7vw,80px) 0;position:relative}
 h2{font-weight:800;font-size:clamp(27px,4.4vw,42px);line-height:1.08;text-wrap:balance}
 .lead{color:var(--muted);font-size:clamp(16px,2vw,18px);max-width:620px;margin:14px auto 0;text-wrap:pretty}
 .shead{text-align:center;max-width:760px;margin:0 auto 10px}
+.shead .eye{margin-bottom:16px}
 /* reveal */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -172,6 +173,35 @@ footer .lg{color:#fff}
 .stickycta .p{font-family:Sora;font-weight:800;font-size:14px;white-space:nowrap}
 .wafloat{position:fixed;right:16px;bottom:88px;z-index:54;width:54px;height:54px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 10px 26px rgba(0,0,0,.22)}
 @media(max-width:760px){.stickycta{display:flex}body{padding-bottom:74px}.wafloat{display:none}}
+/* ===== мобильная оптимизация: всё по центру, ничего за экран ===== */
+@media(max-width:600px){
+  section{padding:46px 0}
+  h2{font-size:25px;line-height:1.18}
+  .lead{font-size:15.5px;margin-top:12px}
+  .shead .eye{margin-bottom:12px}
+  /* кнопки: перенос текста + адекватный размер, не вылезают */
+  .btn{white-space:normal;font-size:16px;max-width:100%}
+  .btn.big{font-size:16px;padding:15px 20px}
+  .nav .btn{padding:10px 13px;font-size:13px}
+  /* hero — всё по центру */
+  .hero .grid>div:first-child{text-align:center}
+  .hero h1{font-size:28px;line-height:1.16;margin:14px 0}
+  .hero p.sub{margin-left:auto;margin-right:auto}
+  .hero .cta-row{flex-direction:column;gap:10px}
+  .hero .cta-row .btn{flex:none;width:100%}
+  .hero .tchips,.hero .cd{justify-content:center}
+  .hero .cd .u{min-width:0;flex:1;padding:9px 4px}
+  .hero .cd .u b{font-size:22px}
+  /* одиночные и парные кнопки — на всю ширину */
+  .center .btn{width:100%}
+  .band .cta-row{flex-direction:column;gap:10px}
+  .band .cta-row .btn{width:100%}
+  .band{padding:30px 22px}
+  /* сетки */
+  .g4{grid-template-columns:1fr 1fr}
+  .fbadge{font-size:12px;padding:9px 11px}.fbadge .n{font-size:17px}
+}
+@media(max-width:400px){.g4{grid-template-columns:1fr}.hero h1{font-size:26px}}
 /* quiz */
 .qz{position:fixed;inset:0;z-index:100;background:rgba(20,12,50,.6);display:none;align-items:center;justify-content:center;padding:16px}
 .qz.on{display:flex}
