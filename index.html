@@ -174,7 +174,7 @@ footer .lg{color:#fff}
 .stickycta .btn{flex:1;padding:14px}
 .stickycta .p{font-family:Manrope;font-weight:800;font-size:14px;white-space:nowrap}
 .wafloat{position:fixed;right:16px;bottom:88px;z-index:54;width:54px;height:54px;border-radius:50%;background:var(--wa);color:#fff;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 10px 26px rgba(0,0,0,.22)}
-@media(max-width:760px){.stickycta{display:flex}body{padding-bottom:74px}.wafloat{display:none}}
+@media(max-width:760px){.stickycta{display:flex;transform:translateY(130%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}.stickycta.show{transform:translateY(0)}body{padding-bottom:74px}.wafloat{display:none}}
 /* ===== мобильная оптимизация: всё по центру, ничего за экран ===== */
 @media(max-width:600px){
   section{padding:46px 0}
@@ -187,15 +187,16 @@ footer .lg{color:#fff}
   .nav .btn{padding:10px 13px;font-size:13px}
   /* hero — всё по центру */
   .hero{border-radius:0 0 28px 28px}
-  .hero .grid{padding:22px 0 30px}
-  .hero .grid>div:first-child{text-align:center}
-  .hero h1{font-size:23px;line-height:1.3;margin:22px 0 18px}
-  .hero p.sub{font-size:15px;line-height:1.5;margin-top:0}
-  .hero .tchips{margin-top:22px}
-  .hero .eye{font-size:11.5px}
+  .hero .grid{padding:0}
+  .hero .grid>div:first-child{text-align:center;min-height:calc(100vh - 84px);min-height:calc(100svh - 84px);display:flex;flex-direction:column;justify-content:space-between;padding:26px 0 18px}
+  .hero h1{font-size:23px;line-height:1.32;margin:0}
+  .hero p.sub{font-size:15px;line-height:1.5;margin:0}
+  .hero .tchips{margin:0;justify-content:center}
+  .hero .eye{font-size:11.5px;align-self:center}
   .mbr{display:inline}
-  .hero .cd{margin-top:20px}.hero .cd .u b{font-size:20px}
-  .hero .ph{margin-top:8px}
+  .hero .cd{margin:0;justify-content:center}.hero .cd .u b{font-size:20px}
+  .hero .cta-row{margin:0}.hero .cta-row .btn{width:100%}
+  .hero .ph{margin-top:20px}
   .hero p.sub{margin-left:auto;margin-right:auto}
   .hero .cta-row{flex-direction:column;gap:10px}
   .hero .cta-row .btn{flex:none;width:100%}
@@ -248,8 +249,8 @@ footer .lg{color:#fff}
     <h1 class="rv d1">За 2,5 часа ваш ребёнок узнает о профессиях будущего и влюбится в технологии</h1>
     <p class="sub rv d2">Офлайн мастер-класс по робототехнике<br class="mbr">для школьников Алматы с 1 по 7 классы</p>
     <div class="tchips rv d2"><span class="tchip">✨ Увлекательная программа</span><span class="brk"></span><span class="tchip">🚁 Летающие дроны</span><span class="tchip">🏆 Призы</span></div>
-    <div class="cta-row rv d3"><button class="btn pri big pulse js-quiz">Записать ребёнка</button></div>
     <div class="cd rv d3" id="cd" aria-label="До старта"></div>
+    <div class="cta-row rv d3"><button class="btn pri big pulse js-quiz">Успейте записать ребёнка</button></div>
   </div>
   <div class="ph rv d1">
     <img fetchpriority="high" src="img/web/hero-mk.jpg" alt="Дети на мастер-классе по робототехнике ROLAB">
@@ -450,6 +451,11 @@ tick();setInterval(tick,1000);
 /* hide header on scroll down (не мешать) */
 let last=0;const hdr=document.getElementById('hdr');
 addEventListener('scroll',()=>{const y=scrollY;hdr.style.transform=(y>last&&y>200)?'translateY(-100%)':'translateY(0)';last=y;},{passive:true});
+/* нижняя плашка: показать через 20 сек ИЛИ после ~3 экрана прокрутки */
+const sticky=document.querySelector('.stickycta');
+if(sticky){let shown=false;const showSticky=()=>{if(!shown){shown=true;sticky.classList.add('show');}};
+  setTimeout(showSticky,20000);
+  addEventListener('scroll',()=>{if(scrollY>innerHeight*2)showSticky();},{passive:true});}
 /* quiz */
 const CONFIG={crmWebhook:'',whatsapp:'77070555666'};
 const qz=document.getElementById('qz'),bar=document.getElementById('qzbar'),nav=document.getElementById('qznav');
