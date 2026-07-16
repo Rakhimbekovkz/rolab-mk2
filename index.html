@@ -109,6 +109,18 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,249,255,.82);backdro
 .card .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;background:rgba(109,74,255,.1)}
 .card h3{font-size:19px;font-weight:800;margin:14px 0 6px;font-family:Manrope}
 .card p{font-size:15px;color:var(--muted)}
+/* ===== WHY: цветные стеклянные блоки на цветном фоне ===== */
+.why{position:relative;overflow:hidden;background:linear-gradient(165deg,#F1EBFF 0%,#F7ECFB 46%,#FFEFF4 100%)}
+.why::before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;top:-90px;left:-110px;background:radial-gradient(circle,rgba(109,74,255,.42),transparent 70%);filter:blur(34px);pointer-events:none;z-index:0}
+.why::after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;bottom:-140px;right:-130px;background:radial-gradient(circle,rgba(255,77,141,.36),transparent 70%);filter:blur(34px);pointer-events:none;z-index:0}
+.why>.wrap{position:relative;z-index:1}
+.why .card{background:linear-gradient(150deg,rgba(109,74,255,.86),rgba(150,80,255,.64));border:1px solid rgba(255,255,255,.32);border-radius:24px;color:#fff;box-shadow:0 22px 50px rgba(80,40,160,.26),inset 0 1px 0 rgba(255,255,255,.45);backdrop-filter:blur(14px) saturate(1.35);-webkit-backdrop-filter:blur(14px) saturate(1.35)}
+.why .card:hover{transform:translateY(-6px);box-shadow:0 32px 72px rgba(80,40,160,.38),inset 0 1px 0 rgba(255,255,255,.45)}
+.why .card:nth-child(2){background:linear-gradient(150deg,rgba(46,108,255,.86),rgba(80,190,255,.62))}
+.why .card:nth-child(3){background:linear-gradient(150deg,rgba(255,70,138,.86),rgba(255,142,66,.66))}
+.why .card .ic{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.42)}
+.why .card h3{color:#fff}
+.why .card p{color:rgba(255,255,255,.94)}
 @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.g3{grid-template-columns:1fr}}
 /* zones (photo) */
@@ -278,10 +290,10 @@ footer .lg{color:#fff}
 </div></div>
 
 <!-- WHY (образование холодной мамы) -->
-<section><div class="wrap">
+<section class="why"><div class="wrap">
   <div class="shead"><span class="eye rv">Почему это важно уже сейчас</span><h2 class="rv">Мир ребёнка уже изменился — <span class="gt">вопрос лишь в том, кем он в нём будет</span></h2><p class="lead rv d1">Через 10 лет ценность будет у тех, кто СОЗДАЁТ технологии, а не только потребляет их в телефоне. И это закладывается не в вузе, а в детстве.</p></div>
   <div class="g3">
-    <div class="card rv"><div class="ic">📱</div><h3>Создатель, а не зритель</h3><p>Пока сверстники листают ленту, ваш ребёнок учится создавать — это интереснее игр и полезнее на всю жизнь.</p></div>
+    <div class="card rv"><div class="ic">📱</div><h3>Создатель, а не зритель</h3><p>Ваш ребёнок научится создавать и увлечётся технологиями, пока его сверстники листают Тикток и залипают в Roblox.</p></div>
     <div class="card rv d1"><div class="ic">🧠</div><h3>Мышление будущего</h3><p>Робототехника развивает логику, инженерное мышление и уверенность — навыки, которые нужны в любой профессии.</p></div>
     <div class="card rv d2"><div class="ic">⏳</div><h3>Идеальный возраст</h3><p>1–7 класс — то самое окно, когда легко влюбиться в технологии. Мастер-класс покажет, зайдёт ли это вашему ребёнку.</p></div>
   </div>
