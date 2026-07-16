@@ -52,8 +52,8 @@ h2{font-weight:800;font-size:clamp(27px,4.4vw,42px);line-height:1.08;text-wrap:b
 .btn.dark{background:var(--ink);color:#fff}
 .btn.line{background:#fff;color:var(--brand);border:2px solid var(--brand)}
 .btn.big{font-size:19px;padding:19px 36px}
-.btn.pulse{animation:pulse 2.4s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 14px 34px rgba(255,77,129,.36)}50%{box-shadow:0 14px 50px rgba(255,77,129,.66)}}
+.btn.pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 14px 34px rgba(255,77,129,.40),0 0 0 0 rgba(255,138,61,.0)}50%{box-shadow:0 16px 46px rgba(255,77,129,.62),0 0 30px 7px rgba(255,138,61,.55)}}
 /* header */
 header{position:sticky;top:0;z-index:60;background:rgba(250,249,255,.82);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);transition:transform .3s}
 .nav{display:flex;align-items:center;height:66px;gap:14px}
@@ -71,7 +71,8 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,249,255,.82);backdro
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(26px)}}
 .hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:center;padding:clamp(30px,5vw,58px) 0;position:relative;z-index:2}
 .hero .eye{background:rgba(255,255,255,.16);color:#fff}
-.hero h1{font-weight:800;font-size:clamp(24px,3.6vw,38px);line-height:1.16;margin:14px 0 14px;text-wrap:balance}
+.hero h1{font-weight:800;font-size:clamp(24px,3.6vw,38px);line-height:1.16;margin:14px 0 14px;text-wrap:balance;background:linear-gradient(100deg,#fff 0%,#FFE7A3 22%,#8FE9FF 48%,#FFB3E6 74%,#fff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 2px 10px rgba(20,10,50,.22));animation:shimmer 4.5s linear infinite}
+@keyframes shimmer{0%{background-position:0% center}100%{background-position:-200% center}}
 .hero h1 em{font-style:normal;background:linear-gradient(90deg,#FFE08A,#FFC14D);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.sub{color:rgba(255,255,255,.92);font-size:clamp(16px,2vw,19px);max-width:540px}
 .hero .cta-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
