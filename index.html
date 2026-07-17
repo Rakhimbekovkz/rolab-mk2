@@ -175,6 +175,7 @@ header{position:sticky;top:0;z-index:60;background:rgba(250,249,255,.82);backdro
 .band{background:var(--grad);color:#fff;border-radius:28px;padding:clamp(30px,5vw,52px);text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 70px rgba(109,74,255,.3)}
 .band h2{color:#fff}.band p{color:rgba(255,255,255,.92);max-width:560px;margin:12px auto 0}
 .band.objection p{text-align:left;max-width:620px;font-size:16px;line-height:1.6}
+.band.objection h2 .ql{white-space:nowrap}
 .band .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
 .band .seats{margin-top:16px;font-weight:800;font-size:14px;background:rgba(255,255,255,.16);display:inline-flex;gap:8px;padding:9px 16px;border-radius:30px}
 /* faq */
@@ -199,6 +200,7 @@ footer .lg{color:#fff}
 @media(max-width:600px){
   section{padding:46px 0}
   h2{font-size:25px;line-height:1.18}
+  .band.objection h2{font-size:clamp(16px,5.4vw,22px);line-height:1.32}
   .lead{font-size:15.5px;margin-top:12px}
   .shead .eye{margin-bottom:12px}
   /* кнопки: перенос текста + адекватный размер, не вылезают */
@@ -317,7 +319,7 @@ footer .lg{color:#fff}
 <!-- ДЛЯ ЛЮБОГО РЕБЁНКА (снятие «мой не технарь») -->
 <section><div class="wrap">
   <div class="band objection rv">
-    <h2>«А вдруг моему не подойдёт?»<span class="dweb"> — </span><br class="mbr">Подойдёт любому 🙌</h2>
+    <h2><span class="ql">«А вдруг моему не подойдёт?»</span><span class="dweb"> — </span><br class="mbr">Подойдёт любому 🙌</h2>
     <p>Даже если ребёнок раньше не увлекался техникой — мы начинаем с нуля, в игровой форме. Первый успех «я сам это сделал!» случается уже в первые минуты. Мастер-класс как раз и нужен, чтобы понять, зайдёт ли это именно вашему ребёнку — без обязательств.</p>
   </div>
 </div></section>
