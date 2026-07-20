@@ -484,7 +484,7 @@ if(sticky){let shown=false;const showSticky=()=>{if(!shown){shown=true;sticky.cl
   setTimeout(showSticky,20000);
   addEventListener('scroll',()=>{if(scrollY>innerHeight*2)showSticky();},{passive:true});}
 /* quiz */
-const CONFIG={crmWebhook:'',whatsapp:'77070555666'};
+const CONFIG={crmWebhook:'https://shanyraqstudy.bitrix24.kz/rest/11/6akcz7qfa3p2318n/crm.lead.add.json',whatsapp:'77070555666'};
 const qz=document.getElementById('qz'),bar=document.getElementById('qzbar'),nav=document.getElementById('qznav');
 const steps=[...document.querySelectorAll('.qzstep')];let cur=0;const answers={};const TOTAL=3;
 function open_(){qz.classList.add('on');document.body.style.overflow='hidden';go(0);}
