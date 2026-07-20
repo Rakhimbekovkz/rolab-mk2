@@ -260,13 +260,7 @@ footer .lg{color:#fff}
 </style>
 </head>
 <body>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','601308563055942');fbq('track','PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=601308563055942&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel Code -->
+<!-- Пиксель Meta 601308563055942 стоит site-wide в настройках Tilda (PageView оттуда). Здесь НЕ дублируем init — только событие Lead в квизе (см. script ниже), иначе двойной PageView. -->
 
 <header id="hdr"><div class="wrap nav">
   <div class="lg"><span class="m"><svg viewBox="0 0 100 100"><g fill="#fff"><rect x="37" y="24" width="9" height="52" rx="3"/><rect x="54" y="24" width="9" height="52" rx="3"/><rect x="24" y="40" width="52" height="9" rx="3"/><rect x="24" y="57" width="52" height="9" rx="3"/></g></svg></span><span class="t">Shanyraq Study × RoLab</span></div>
