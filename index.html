@@ -260,6 +260,13 @@ footer .lg{color:#fff}
 </style>
 </head>
 <body>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','505354825936868');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=505354825936868&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 
 <header id="hdr"><div class="wrap nav">
   <div class="lg"><span class="m"><svg viewBox="0 0 100 100"><g fill="#fff"><rect x="37" y="24" width="9" height="52" rx="3"/><rect x="54" y="24" width="9" height="52" rx="3"/><rect x="24" y="40" width="52" height="9" rx="3"/><rect x="24" y="57" width="52" height="9" rx="3"/></g></svg></span><span class="t">Shanyraq Study × RoLab</span></div>
@@ -501,7 +508,7 @@ document.getElementById('qzsubmit').addEventListener('click',()=>{
   const name=document.getElementById('qzname').value.trim();const phone=document.getElementById('qzphone').value.trim();
   if(name.length<2||phone.replace(/\D/g,'').length<10){document.getElementById('qzerr').style.display='block';return;}
   answers.name=name;answers.phone=phone;
-  try{if(window.fbq)fbq('track','CompleteRegistration');}catch(e){}
+  try{if(window.fbq){fbq('track','Lead');fbq('track','CompleteRegistration');}}catch(e){}
   try{if(window.gtag)gtag('event','sign_up');}catch(e){}
   const comment='МК 25-26 июля | Класс: '+(answers.class||'')+' | День: '+(answers.day||'');
   if(CONFIG.crmWebhook){fetch(CONFIG.crmWebhook,{method:'POST',headers:{'Content-Type':'application/json'},
