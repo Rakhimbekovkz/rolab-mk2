@@ -241,7 +241,7 @@ if(sticky){let shown=false;const showSticky=()=>{if(!shown){shown=true;sticky.cl
   setTimeout(showSticky,20000);
   addEventListener('scroll',()=>{if(scrollY>innerHeight*2)showSticky();},{passive:true});}
 /* quiz */
-const CONFIG={crmWebhook:'https://shanyraqstudy.bitrix24.kz/rest/11/6akcz7qfa3p2318n/crm.lead.add.json',whatsapp:'77758876442'};
+const CONFIG={crmBase:'https://shanyraqstudy.bitrix24.kz/rest/11/6akcz7qfa3p2318n/',dealCategory:21,dealStage:'C21:NEW',assignedById:19,whatsapp:'77758876442'};
 const qz=document.getElementById('qz'),bar=document.getElementById('qzbar'),nav=document.getElementById('qznav');
 const steps=[...document.querySelectorAll('.qzstep')];let cur=0;const answers={};const TOTAL=3;
 function open_(){qz.classList.add('on');document.body.style.overflow='hidden';go(0);}
@@ -261,8 +261,13 @@ document.getElementById('qzsubmit').addEventListener('click',()=>{
   try{if(window.fbq){fbq('track','Lead');fbq('track','CompleteRegistration');}}catch(e){}
   try{if(window.gtag)gtag('event','sign_up');}catch(e){}
   const comment='МК 25-26 июля | Класс: '+(answers.class||'')+' | День: '+(answers.day||'');
-  if(CONFIG.crmWebhook){fetch(CONFIG.crmWebhook,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({fields:{TITLE:'Регистрация на МК — '+name,NAME:name,PHONE:[{VALUE:phone,VALUE_TYPE:'WORK'}],SOURCE_ID:'WEB',COMMENTS:comment}})}).catch(()=>{});}
+  if(CONFIG.crmBase){
+    const api=(m,f)=>fetch(CONFIG.crmBase+m,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:f})}).then(r=>r.json());
+    /* создаём контакт, затем сделку в воронке РОБОТОТЕХНИКА на ответственного */
+    api('crm.contact.add.json',{NAME:name,PHONE:[{VALUE:phone,VALUE_TYPE:'WORK'}],ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',OPENED:'Y'})
+      .then(res=>{var f={TITLE:'Заявка с лендинга (МК Робо) — '+name,CATEGORY_ID:CONFIG.dealCategory,STAGE_ID:CONFIG.dealStage,ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',OPENED:'Y',COMMENTS:'Тел: '+phone+' | '+comment};if(res&&res.result)f.CONTACT_ID=res.result;return api('crm.deal.add.json',f);})
+      .catch(function(){});
+  }
   go(3);
 });
 </script>
