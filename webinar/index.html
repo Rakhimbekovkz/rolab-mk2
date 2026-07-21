@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Онлайн-вебинар «Кем станет ваш ребёнок?» — 25 июля | для родителей</title>
-<meta name="description" content="Бесплатный* онлайн-вебинар для родителей: к какой профессии будущего склонен ваш ребёнок и как это развивать из любого города. 25 июля.">
+<title>Онлайн мастер-класс «Кем станет ваш ребёнок?» — 25 июля | для родителей</title>
+<meta name="description" content="Бесплатный* онлайн мастер-класс для родителей: к какой профессии будущего склонен ваш ребёнок и как это развивать из любого города. 25 июля.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236D4AFF'/><text x='50' y='73' font-size='58' text-anchor='middle'>🎓</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -58,6 +58,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,244,255,.86);backdro
 .learn div{display:flex;align-items:flex-start;gap:11px;font-size:15.5px}
 .learn div .c{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:1px}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero .hcta{width:100%;max-width:340px}
 .hero .price{font-size:14px;color:rgba(255,255,255,.85)}
 .hero .price b{color:#fff;font-size:16px}
 .hero .price s{opacity:.6}
@@ -136,15 +137,26 @@ footer a{color:#fff;font-weight:700}
 .stick .btn{flex:1;padding:14px}
 
 @media(max-width:860px){
-  .hero .grid{grid-template-columns:1fr;gap:26px;padding:30px 0 40px}
+  .hero .grid{grid-template-columns:1fr;gap:22px;padding:26px 0 38px}
+  .hero h1{font-size:27px}
+  .hero p.sub{font-size:16px}
+  .hero .hcta{max-width:none}
   .g3{grid-template-columns:1fr}
-  .who{grid-template-columns:1fr;padding:26px}
-  .expert{grid-template-columns:1fr;text-align:center;padding:26px}
-  .expert .ava{margin:0 auto}.expert ul{text-align:left}
+  .who{grid-template-columns:1fr;padding:24px}
+  .expert{grid-template-columns:1fr;text-align:center;padding:24px;gap:18px}
+  .expert .ava{margin:0 auto;width:96px;height:96px;font-size:50px}.expert ul{text-align:left}
+  .reg{padding:26px 20px}
   .reg .frow{grid-template-columns:1fr}
+  .reg h2{font-size:24px}
+  section{padding:40px 0}
+  .shead{margin-bottom:24px}
   .stick{display:flex}
-  body{padding-bottom:74px}
+  body{padding-bottom:76px}
   .cta-row .btn{width:100%}
+}
+@media(max-width:400px){
+  .cd .u{min-width:0;flex:1;padding:9px 2px}
+  .cd .u b{font-size:19px}
 }
 </style>
 </head>
@@ -158,27 +170,27 @@ footer a{color:#fff;font-weight:700}
 <!-- HERO -->
 <div class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap"><div class="grid">
   <div>
-    <span class="badge">🔴 Онлайн-вебинар · 25 июля</span>
+    <span class="badge">🔴 Онлайн мастер-класс · 25 июля</span>
     <h1>Кем станет ваш ребёнок <span class="g">в будущем?</span></h1>
-    <p class="sub">Онлайн-вебинар для родителей детей 6–13 лет: профессии будущего, робототехника и как развивать талант ребёнка из любого города Казахстана.</p>
+    <p class="sub">Онлайн мастер-класс для родителей детей 6–13 лет: профессии будущего, робототехника и как развивать талант ребёнка из любого города Казахстана.</p>
     <div class="learn">
       <div><span class="c">✓</span> К какой профессии будущего склонен ваш ребёнок</div>
       <div><span class="c">✓</span> Как развивать это дома — даже если вы сами не технарь</div>
       <div><span class="c">✓</span> Как оторвать ребёнка от телефона и увлечь созиданием</div>
     </div>
     <div class="cta-row">
-      <a class="btn pri big pulse" href="#reg" style="max-width:320px">Забронировать место →</a>
+      <a class="btn pri big pulse hcta" href="#reg">Забронировать место →</a>
     </div>
-    <p class="price" style="margin-top:12px">Участие <b>990 ₸</b> · <s>зачтём при покупке курса</s> — то есть по сути бесплатно</p>
+    <p class="price" style="margin-top:12px">Участие <b>990 ₸</b> — <b style="color:#fff">зачтём при покупке курса</b>, по сути бесплатно</p>
   </div>
   <div>
     <div class="ecard">
       <div class="row"><span class="ic">📅</span><div><b>25 июля, 19:00</b><span>по времени Астаны</span></div></div>
       <div class="row"><span class="ic">💻</span><div><b>Онлайн, из любого города</b><span>ссылка придёт в WhatsApp</span></div></div>
       <div class="row"><span class="ic">⏱</span><div><b>~60 минут + ответы</b><span>с живым разбором в чате</span></div></div>
-      <div class="row"><span class="ic">🎁</span><div><b>Подарок участникам</b><span>только для тех, кто на вебинаре</span></div></div>
+      <div class="row"><span class="ic">🎁</span><div><b>Подарок участникам</b><span>только для тех, кто на мастер-классе</span></div></div>
       <div class="cd" id="cd"></div>
-      <div style="text-align:center;font-size:12px;color:rgba(255,255,255,.65);margin-top:6px">до старта вебинара</div>
+      <div style="text-align:center;font-size:12px;color:rgba(255,255,255,.65);margin-top:6px">до старта мастер-класса</div>
     </div>
   </div>
 </div></div></div>
@@ -229,7 +241,7 @@ footer a{color:#fff;font-weight:700}
   <div class="reg"><div class="blob b1"></div>
     <div class="inner">
       <span class="eye" style="background:rgba(255,255,255,.14);color:#fff">Бронь места</span>
-      <h2>Забронируйте место на вебинаре</h2>
+      <h2>Забронируйте место на мастер-классе</h2>
       <p class="sub">25 июля, 19:00 · онлайн · места ограничены</p>
       <div class="pricetag"><b>990 ₸</b><span>зачтём при покупке курса</span></div>
 
@@ -244,24 +256,24 @@ footer a{color:#fff;font-weight:700}
         <button class="btn kaspi big" id="pay">Оплатить 990 ₸ через Kaspi</button>
       </form>
       <div class="kaspinote"><b>Kaspi</b> Оплата в приложении Kaspi.kz — быстро и безопасно</div>
-      <p class="note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Ссылка на вебинар придёт в WhatsApp.</p>
+      <p class="note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Ссылка на мастер-класс придёт в WhatsApp.</p>
 
       <div class="done" id="done">
         <div class="em">🎉</div>
         <h2>Остался последний шаг</h2>
         <p class="sub" style="text-align:left;max-width:420px;margin:0 auto 4px">
           <b style="color:#fff">1.</b> Оплатите 990 ₸ в Kaspi (кнопка ниже).<br>
-          <b style="color:#fff">2.</b> Отправьте чек нам в WhatsApp — пришлём ссылку на вебинар и напомним перед стартом.
+          <b style="color:#fff">2.</b> Отправьте чек нам в WhatsApp — пришлём ссылку на мастер-класс и напомним перед стартом.
         </p>
         <a class="btn kaspi big" id="paylink" href="#" target="_blank" style="margin-top:18px">Оплатить 990 ₸ в Kaspi →</a>
-        <a class="btn wa big" href="https://wa.me/77758876442?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B8%D0%BB%28%D0%B0%29%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%B2%20%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%B5%2025%20%D0%B8%D1%8E%D0%BB%D1%8F%2C%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%20%D1%87%D0%B5%D0%BA%20%D0%BE%D0%B1%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%20%F0%9F%91%87" target="_blank" style="margin-top:11px">Отправить чек в WhatsApp →</a>
+        <a class="btn wa big" href="https://wa.me/77758876442?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B8%D0%BB%28%D0%B0%29%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%B2%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B5%2025%20%D0%B8%D1%8E%D0%BB%D1%8F%2C%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%20%D1%87%D0%B5%D0%BA%20%D0%BE%D0%B1%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%20%F0%9F%91%87" target="_blank" style="margin-top:11px">Отправить чек в WhatsApp →</a>
       </div>
     </div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <span>© 2026 Shanyraq Study × RoLab · Онлайн-вебинар «Кем станет ваш ребёнок?»</span>
+  <span>© 2026 Shanyraq Study × RoLab · Онлайн мастер-класс «Кем станет ваш ребёнок?»</span>
   <span style="margin-left:auto"><a href="https://wa.me/77758876442" target="_blank">WhatsApp</a></span>
 </div></footer>
 
