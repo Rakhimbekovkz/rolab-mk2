@@ -1,0 +1,224 @@
+<style>
+  :root{
+    --bg:#F5F3FB;--surface:#FFFFFF;--surface-2:#EFEAFA;--surface-3:#E6DFF6;
+    --ink:#1B1533;--muted:#625B7E;--faint:#948CB2;--line:#E7E1F5;
+    --accent:#6A45E6;--accent-soft:#8A6BFF;--accent-bg:#F0EBFD;
+    --coral:#E24E2A;--coral-bg:#FCEBE5;--coral-line:#F2C1AF;
+    --gold:#946B00;--gold-bg:#FBF1D8;--good:#1C8A5B;
+    --sh:0 1px 2px rgba(40,20,90,.05),0 10px 32px rgba(60,30,130,.07);
+    --fs:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --fm:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){:root{
+    --bg:#0C0A16;--surface:#15112A;--surface-2:#1D1735;--surface-3:#271F40;
+    --ink:#ECE8F7;--muted:#A69DC0;--faint:#6E6690;--line:#262036;
+    --accent:#9B82FF;--accent-soft:#B4A2FF;--accent-bg:#1B1636;
+    --coral:#FF7A55;--coral-bg:#2A150F;--coral-line:#48231A;
+    --gold:#D9B24A;--gold-bg:#2A2210;--good:#37C58C;
+    --sh:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.4);
+  }}
+  :root[data-theme="light"]{--bg:#F5F3FB;--surface:#FFFFFF;--surface-2:#EFEAFA;--surface-3:#E6DFF6;--ink:#1B1533;--muted:#625B7E;--faint:#948CB2;--line:#E7E1F5;--accent:#6A45E6;--accent-soft:#8A6BFF;--accent-bg:#F0EBFD;--coral:#E24E2A;--coral-bg:#FCEBE5;--coral-line:#F2C1AF;--gold:#946B00;--gold-bg:#FBF1D8;--good:#1C8A5B;--sh:0 1px 2px rgba(40,20,90,.05),0 10px 32px rgba(60,30,130,.07)}
+  :root[data-theme="dark"]{--bg:#0C0A16;--surface:#15112A;--surface-2:#1D1735;--surface-3:#271F40;--ink:#ECE8F7;--muted:#A69DC0;--faint:#6E6690;--line:#262036;--accent:#9B82FF;--accent-soft:#B4A2FF;--accent-bg:#1B1636;--coral:#FF7A55;--coral-bg:#2A150F;--coral-line:#48231A;--gold:#D9B24A;--gold-bg:#2A2210;--good:#37C58C;--sh:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.4)}
+  *{box-sizing:border-box}body{margin:0}
+  .wrap{font-family:var(--fs);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;padding:clamp(18px,4vw,56px) clamp(14px,4vw,22px)}
+  .doc{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+  h1,h2,h3{text-wrap:balance}
+  .eyebrow{font-family:var(--fm);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--accent)}
+
+  .head{background:linear-gradient(150deg,var(--accent),#4A28B4 95%);color:#fff;border-radius:22px;padding:clamp(24px,4vw,40px);position:relative;overflow:hidden}
+  .head .eyebrow{color:#D6C9FF}
+  .head h1{font-size:clamp(25px,4.5vw,38px);font-weight:800;letter-spacing:-.022em;line-height:1.08;margin:9px 0 10px}
+  .head p{margin:0;color:#E3DAFF;font-size:clamp(15px,2vw,17px);max-width:60ch}
+  .head .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .chip{font-family:var(--fm);font-size:12px;color:#EEE9FF;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);padding:6px 11px;border-radius:8px}
+  .chip b{color:#fff}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,2.6vw,26px);box-shadow:var(--sh)}
+  .card>.eyebrow{display:block;margin-bottom:6px}
+  h2.sec{font-size:clamp(19px,2.6vw,23px);font-weight:750;letter-spacing:-.01em;margin:0 0 4px}
+  .lead{color:var(--muted);margin:0 0 16px;font-size:14.5px}
+
+  .princ{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .pr{background:var(--surface-2);border:1px solid var(--line);border-radius:13px;padding:15px 16px}
+  .pr b{display:block;font-size:14.5px;margin-bottom:3px}
+  .pr span{font-size:13px;color:var(--muted)}
+  @media(max-width:600px){.princ{grid-template-columns:1fr}}
+
+  .smysl{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--sh)}
+  .smysl .top{display:flex;align-items:flex-start;gap:14px;padding:16px 20px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+  .smysl .no{font-family:var(--fm);font-weight:800;font-size:19px;color:var(--accent);line-height:1.2;flex:0 0 auto}
+  .smysl .ttl{flex:1}
+  .smysl .ttl h3{margin:0;font-size:17.5px;font-weight:750;line-height:1.25}
+  .smysl .ttl .trig{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:5px;display:inline-block}
+  .cheap{flex:0 0 auto;font-family:var(--fm);font-size:10.5px;font-weight:700;color:var(--coral);background:var(--coral-bg);border:1px solid var(--coral-line);padding:4px 9px;border-radius:20px;white-space:nowrap}
+  .smysl .body{padding:16px 20px;display:flex;flex-direction:column;gap:13px}
+  .why{font-size:14.5px}
+  .why b{font-weight:650}
+  .hooks{background:var(--accent-bg);border-radius:12px;padding:12px 15px}
+  .hooks .lbl{font-family:var(--fm);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:8px}
+  .hooks ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .hooks li{font-size:14px;padding-left:16px;position:relative}
+  .hooks li::before{content:"›";position:absolute;left:2px;color:var(--accent);font-weight:800}
+
+  .amp{display:flex;flex-direction:column;gap:10px}
+  .amp .row{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
+  .amp .row .k{flex:0 0 auto;font-weight:750;color:var(--accent);min-width:118px}
+  .dont{background:var(--coral-bg);border:1px solid var(--coral-line);border-radius:16px;padding:clamp(18px,2.6vw,24px)}
+  .dont .eyebrow{color:var(--coral)}
+  .dont ul{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+  .dont li{padding-left:24px;position:relative;font-size:14.5px}
+  .dont li::before{content:"✕";position:absolute;left:2px;color:var(--coral);font-weight:800}
+  .dont li b{font-weight:650}
+
+  footer{text-align:center;color:var(--faint);font-size:12.5px;padding:6px 0}
+  @media print{.wrap{padding:0}.smysl,.card,.head,.dont{break-inside:avoid}}
+</style>
+
+<div class="wrap"><div class="doc">
+
+  <header class="head">
+    <span class="eyebrow">Смыслы для рекламы · вебинары для родителей</span>
+    <h1>Сильные смыслы под дешёвый лид</h1>
+    <p>Банк идей для маркетологов: на что давить в креативах, чтобы реклама на онлайн мастер-класс собирала регистрации по низкой цене. Не текст объявлений — а <b>смыслы</b>, из которых их придумывать.</p>
+    <div class="chips">
+      <span class="chip">🎯 Цель CPL <b>500–700 ₸</b></span>
+      <span class="chip">👩 Мамы детей <b>6–13 лет</b></span>
+      <span class="chip">🆓 Оффер: <b>онлайн мастер-класс</b></span>
+    </div>
+  </header>
+
+  <section class="card">
+    <span class="eyebrow">Сначала — механика</span>
+    <h2 class="sec">Что вообще делает лид дешёвым</h2>
+    <p class="lead">CPL падает не от «красивого» креатива, а от этих пяти вещей. Любой смысл ниже подавайте через них.</p>
+    <div class="princ">
+      <div class="pr"><b>Любопытство про СВОЕГО ребёнка</b><span>Не «наш курс», а «узнайте про вашего ребёнка». Личное всегда дешевле.</span></div>
+      <div class="pr"><b>Массовая боль</b><span>Телефон, будущее — резонирует почти у каждого родителя → высокий CTR → дешёвый показ.</span></div>
+      <div class="pr"><b>Низкий барьер</b><span>«Бесплатно / почти бесплатно», «за один вечер», «без обязательств».</span></div>
+      <div class="pr"><b>Эмоция + живое видео</b><span>UGC-подача (снято на телефон), крючок в первые 3 сек, смотрят без звука → субтитры.</span></div>
+      <div class="pr"><b>Само-таргетинг в 1-й фразе</b><span>«Родителям школьников», «ваш ребёнок 6–13 лет» — целевые узнают себя, лишние проходят мимо.</span></div>
+      <div class="pr"><b>Одна мысль на креатив</b><span>Один смысл = один крючок. Смешаешь — размоешь и удорожишь.</span></div>
+    </div>
+  </section>
+
+  <div style="display:flex;flex-direction:column;gap:16px">
+
+    <article class="smysl">
+      <div class="top"><div class="no">01</div><div class="ttl"><h3>Узнайте, кем станет ИМЕННО ваш ребёнок</h3><span class="trig">любопытство · персонализация</span></div><span class="cheap">🔥 самый дешёвый</span></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> родителю не интересен «курс», ему интересен его ребёнок. Обещание узнать склонность конкретно своего ребёнка даёт максимальный CTR и самый дешёвый клик.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«За один вечер узнайте, к какой профессии будущего склонен ваш ребёнок»</li>
+          <li>«Ваш ребёнок — будущий инженер, программист или изобретатель? Проверьте»</li>
+          <li>«Тест для родителей: раскройте талант ребёнка (бесплатно, 25 июля)»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">02</div><div class="ttl"><h3>Ребёнок в телефоне — а время уходит</h3><span class="trig">боль · тревога</span></div><span class="cheap">🔥 массовая боль</span></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> телефон — боль почти каждого родителя. Не вина ребёнка, а «ему не показали, что создавать интереснее». Даём не упрёк, а решение.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Пока другие дети залипают в телефоне — ваш может собирать роботов»</li>
+          <li>«Сколько часов в день ваш ребёнок в телефоне? А что если направить это в дело?»</li>
+          <li>«Как увлечь ребёнка так, чтобы он сам забыл про телефон»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">03</div><div class="ttl"><h3>Профессии будущего — их создают уже сейчас</h3><span class="trig">страх за будущее</span></div><span class="cheap">🔥 сильный</span></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> родитель боится, что ребёнок «не впишется» в будущее. 2/3 профессий к 2030 — за технологиями. Закладывается в 6–13 лет, а не в вузе.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Кем станет ваш ребёнок через 10 лет? Профессии будущего — за теми, кто создаёт технологии»</li>
+          <li>«Покажите ребёнку профессии будущего — пока другие только листают ленту»</li>
+          <li>«2/3 профессий к 2030 году потребуют технологий. Ваш ребёнок готов?»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">04</div><div class="ttl"><h3>Вы не технарь? И не нужно</h3><span class="trig">снятие беспомощности</span></div></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> частый стоп-фактор — «я сама не разбираюсь, куда его вести». Снимаем: разбираться не нужно, покажем и подскажем.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Не знаете, куда развивать ребёнка? Мы подскажем — бесплатно, за один вечер»</li>
+          <li>«Вы не обязаны быть инженером, чтобы вырастить инженера»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">05</div><div class="ttl"><h3>Раньше только Алматы. Теперь — из любого города</h3><span class="trig">новая доступность</span></div></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> огромная аудитория за пределами Алматы, которая раньше «пролетала». Даём им ощущение «наконец-то и для нас».</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Живёте не в Алматы? Топовое робо-образование теперь онлайн — из любого города»</li>
+          <li>«Ребёнку из [любого города] больше не нужно ехать в столицу, чтобы стать инженером»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">06</div><div class="ttl"><h3>Гордость: ребёнок-создатель, а не потребитель</h3><span class="trig">позитивная эмоция · мечта</span></div></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> сильнее страха продаёт мечта. Момент, когда ребёнок с горящими глазами показывает то, что создал сам — эмоция, которую хочет каждый родитель.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Представьте лицо ребёнка, когда он покажет вам робота, которого собрал сам»</li>
+          <li>«Не игрушка из магазина — а то, что ребёнок создал своими руками»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">07</div><div class="ttl"><h3>Учат те, чьи ученики — чемпионы мира</h3><span class="trig">доверие · авторитет</span></div></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> снимает «а вдруг это несерьёзно/самоучки». Регалии = доверие → выше конверсия и качество лида.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Мастер-класс от тех, чьи ученики — чемпионы мира по робототехнике»</li>
+          <li>«Нас поддержал Павел Дуров грантом $25 000. Приходите узнать, чему учим»</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="smysl">
+      <div class="top"><div class="no">08</div><div class="ttl"><h3>Один вечер, который может изменить путь ребёнка</h3><span class="trig">ценность · низкий риск</span></div></div>
+      <div class="body">
+        <div class="why"><b>Почему цепляет:</b> огромная обещанная ценность за минимальные вложения (вечер + почти бесплатно). Соотношение «выгода/затраты» = дешёвая регистрация.</div>
+        <div class="hooks"><div class="lbl">Крючки</div><ul>
+          <li>«Один вечер — и вы поймёте, куда развивать ребёнка. Бесплатно, 25 июля»</li>
+          <li>«Всего один онлайн-вечер вместо месяцев сомнений “чем занять ребёнка”»</li>
+        </ul></div>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="card">
+    <span class="eyebrow">Усилители</span>
+    <h2 class="sec">Добавляйте к любому смыслу</h2>
+    <div class="amp">
+      <div class="row"><span class="k">Бесплатность</span><span>«Бесплатный онлайн мастер-класс» / «990 ₸, которые зачтём в курс — по сути бесплатно» — рушит барьер.</span></div>
+      <div class="row"><span class="k">Дефицит</span><span>«Только 25 июля», «мест ограничено», «регистрация закрывается» — двигает действовать сейчас.</span></div>
+      <div class="row"><span class="k">Без обязательств</span><span>«Просто прийти и посмотреть», «без давления» — снимает страх «впарят».</span></div>
+      <div class="row"><span class="k">Конкретика</span><span>Возраст (6–13 лет), город (любой), формат (онлайн), длительность (один вечер) — само-таргетинг + доверие.</span></div>
+    </div>
+  </section>
+
+  <section class="dont">
+    <span class="eyebrow">Что удорожает лид — не делать</span>
+    <ul>
+      <li><b>Начинать с продукта, курса или цены.</b> Это не крючок. Крючок — боль или любопытство про ребёнка.</li>
+      <li><b>Продавать курс в лоб.</b> Продаём РЕГИСТРАЦИЮ на бесплатный мастер-класс, а не курс за 350к.</li>
+      <li><b>Умный, сложный текст.</b> Пишем как мама маме — просто и по-человечески.</li>
+      <li><b>Глянцевая безэмоциональная картинка / «говорящая голова».</b> Дороже, чем живое эмоциональное видео.</li>
+      <li><b>Несколько мыслей в одном креативе.</b> Один смысл = один крючок = дешёвый клик.</li>
+      <li><b>Слабые первые 3 секунды.</b> Если не зацепил сразу — пролистают, и вы платите зря.</li>
+    </ul>
+  </section>
+
+  <footer>Shanyraq Study × RoLab · смыслы для рекламы онлайн мастер-классов · цель CPL 500–700 ₸</footer>
+
+</div></div>
