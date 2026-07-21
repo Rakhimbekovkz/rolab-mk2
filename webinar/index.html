@@ -88,6 +88,13 @@ h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}
 .card h3{font-size:19px;margin-bottom:7px}
 .card p{color:var(--muted);font-size:15px}
 
+/* program */
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pitem{display:flex;gap:15px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:var(--sh);align-items:flex-start}
+.pitem .n{flex:0 0 auto;font-weight:800;font-size:15px;color:#fff;background:var(--grad);width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.pitem b{display:block;font-size:16.5px;margin-bottom:3px;line-height:1.25}
+.pitem p{color:var(--muted);font-size:14.5px}
+
 /* for whom */
 .who{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:var(--sh);display:grid;grid-template-columns:1fr 1fr;gap:16px 34px;align-items:center}
 .who h2{margin-bottom:6px}
@@ -142,6 +149,7 @@ footer a{color:#fff;font-weight:700}
   .hero p.sub{font-size:16px}
   .hero .hcta{max-width:none}
   .g3{grid-template-columns:1fr}
+  .prog{grid-template-columns:1fr}
   .who{grid-template-columns:1fr;padding:24px}
   .expert{grid-template-columns:1fr;text-align:center;padding:24px;gap:18px}
   .expert .ava{margin:0 auto;width:96px;height:96px;font-size:50px}.expert ul{text-align:left}
@@ -173,11 +181,6 @@ footer a{color:#fff;font-weight:700}
     <span class="badge">🔴 Онлайн мастер-класс · 25 июля</span>
     <h1>Кем станет ваш ребёнок <span class="g">в будущем?</span></h1>
     <p class="sub">Онлайн мастер-класс для родителей детей 6–13 лет: профессии будущего, робототехника и как развивать талант ребёнка из любого города Казахстана.</p>
-    <div class="learn">
-      <div><span class="c">✓</span> К какой профессии будущего склонен ваш ребёнок</div>
-      <div><span class="c">✓</span> Как развивать это дома — даже если вы сами не технарь</div>
-      <div><span class="c">✓</span> Как оторвать ребёнка от телефона и увлечь созиданием</div>
-    </div>
     <div class="cta-row">
       <a class="btn pri big pulse hcta" href="#reg">Забронировать место →</a>
     </div>
@@ -195,13 +198,16 @@ footer a{color:#fff;font-weight:700}
   </div>
 </div></div></div>
 
-<!-- ЧТО УЗНАЕТЕ -->
+<!-- ПРОГРАММА / ТЕМЫ -->
 <section><div class="wrap">
-  <div class="shead"><span class="eye">Что вы получите</span><h2>За один вечер — ясность о будущем ребёнка</h2></div>
-  <div class="g3">
-    <div class="card"><div class="ic">🎯</div><h3>Склонность ребёнка</h3><p>Разберём по 3 признакам, к какой профессии будущего у вашего ребёнка есть талант.</p></div>
-    <div class="card"><div class="ic">🛠️</div><h3>План развития</h3><p>Что делать дома уже сейчас, чтобы развить инженерное мышление — просто и без давления.</p></div>
-    <div class="card"><div class="ic">🚀</div><h3>Профессии будущего</h3><p>Какие навыки будут ценны через 10 лет и почему это закладывается в 6–13 лет, а не в вузе.</p></div>
+  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~60 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
+  <div class="prog">
+    <div class="pitem"><span class="n">01</span><div><b>К какой профессии будущего склонен ваш ребёнок</b><p>Определим по 3 признакам, к чему у ребёнка есть талант.</p></div></div>
+    <div class="pitem"><span class="n">02</span><div><b>Какие профессии будут востребованы через 10 лет</b><p>И почему это закладывается в 6–13 лет, а не в вузе.</p></div></div>
+    <div class="pitem"><span class="n">03</span><div><b>Как развивать это дома — даже если вы не технарь</b><p>Простые шаги без давления и дорогих кружков.</p></div></div>
+    <div class="pitem"><span class="n">04</span><div><b>Как оторвать ребёнка от телефона</b><p>Переключить экран на созидание — сборку и 3D-печать.</p></div></div>
+    <div class="pitem"><span class="n">05</span><div><b>С чего начать в любом городе Казахстана</b><p>Понятный план обучения робототехнике онлайн.</p></div></div>
+    <div class="pitem"><span class="n">🎁</span><div><b>Подарок участникам мастер-класса</b><p>Расскажем, как его получить — только для тех, кто на встрече.</p></div></div>
   </div>
 </div></section>
 
@@ -296,11 +302,24 @@ tick();setInterval(tick,1000);
 /* submit -> capture -> Kaspi */
 document.getElementById('pay').addEventListener('click',()=>{
   const name=(document.getElementById('f_name').value||'').trim();
+  const city=document.getElementById('f_city').value;
+  const klass=document.getElementById('f_class').value;
   const phone=(document.getElementById('f_phone').value||'').trim();
   if(name.length<2||phone.replace(/\D/g,'').length<10){document.getElementById('err').style.display='block';return;}
+  try{if(window.fbq){fbq('track','Lead');fbq('track','InitiateCheckout');}}catch(e){}
+  if(CONFIG.crmBase){
+    const pr=new URLSearchParams(location.search),utm={};
+    ['source','medium','campaign','content','term'].forEach(k=>{const v=pr.get('utm_'+k);if(v)utm['UTM_'+k.toUpperCase()]=v});
+    if(!utm.UTM_SOURCE)utm.UTM_SOURCE='landing-webinar';
+    const api=(m,f)=>fetch(CONFIG.crmBase+m,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:f})}).then(r=>r.json());
+    const srcDesc='Вебинар 25 июля · '+city+' · '+klass+' · оплата 990₸ (ожидает)';
+    api('crm.contact.add.json',{NAME:name,PHONE:[{VALUE:phone,VALUE_TYPE:'WORK'}],ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',SOURCE_DESCRIPTION:srcDesc,OPENED:'Y'})
+      .then(r=>{const f=Object.assign({TITLE:'Вебинар 25.07 — '+name,CATEGORY_ID:CONFIG.dealCategory,STAGE_ID:CONFIG.dealStage,ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',SOURCE_DESCRIPTION:srcDesc,OPENED:'Y',COMMENTS:'Тел: '+phone+' | Город: '+city+' | Класс: '+klass+' | Вебинар 25.07, оплата 990₸ ожидает'},utm);if(r&&r.result)f.CONTACT_ID=r.result;return api('crm.deal.add.json',f)}).catch(()=>{});
+  }
   document.getElementById('form').style.display='none';
-  document.getElementById('done').classList.add('on');
+  const dn=document.getElementById('done'); dn.classList.add('on');
   document.getElementById('paylink').href=CONFIG.kaspiLink;
+  if(CONFIG.kaspiLink && CONFIG.kaspiLink!=='#') window.open(CONFIG.kaspiLink,'_blank');
 });
 </script>
 </body>
