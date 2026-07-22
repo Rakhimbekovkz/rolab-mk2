@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Онлайн мастер-класс «Кем станет ваш ребёнок?» — 25 июля | для родителей</title>
-<meta name="description" content="Бесплатный* онлайн мастер-класс для родителей: к какой профессии будущего склонен ваш ребёнок и как это развивать из любого города. 25 июля.">
+<meta name="description" content="Онлайн мастер-класс по робототехнике для родителей: к какой профессии будущего склонен ваш ребёнок и как развивать талант из любого города. 25 июля, два потока.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236D4AFF'/><text x='50' y='73' font-size='58' text-anchor='middle'>🎓</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -105,12 +105,9 @@ h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}
 .pitem .n{flex:0 0 auto;font-weight:800;font-size:15px;color:#fff;background:var(--grad);width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center}
 .pitem b{display:block;font-size:16.5px;margin-bottom:3px;line-height:1.25}
 .pitem p{color:var(--muted);font-size:14.5px}
-.pitem:nth-child(1){background:#F3F0FF}
-.pitem:nth-child(2){background:#FFF1EC}
-.pitem:nth-child(3){background:#E9F9F1}
-.pitem:nth-child(4){background:#EAF2FF}
-.pitem:nth-child(5){background:#FFF6E0}
-.pitem:nth-child(6){background:#FFEDF4}
+.pitem:nth-child(3n+1){background:#F4F1FC}
+.pitem:nth-child(3n+2){background:#EFF1FB}
+.pitem:nth-child(3n){background:#F7F0F9}
 
 /* for whom */
 .who{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3vw,36px);box-shadow:var(--sh)}
@@ -170,6 +167,10 @@ footer a{color:#fff;font-weight:700}
 .stick .p{font-weight:800;font-size:14px}.stick .p span{display:block;font-size:11px;color:var(--muted);font-weight:600}
 .stick .btn{flex:1;padding:14px}
 
+/* доступность */
+.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.slot input:focus-visible+span{outline:2px solid var(--brand);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+
 @media(max-width:860px){
   .hero .grid{grid-template-columns:1fr;gap:16px;padding:18px 0 26px}
   .hero .grid>div:first-child{text-align:center;display:flex;flex-direction:column;align-items:center}
@@ -201,7 +202,7 @@ footer a{color:#fff;font-weight:700}
 <body>
 <header><div class="wrap nav">
   <div class="lg"><span class="m">🎓</span><span>Shanyraq Study × RoLab</span></div>
-  <a class="wa-consult" href="https://wa.me/77070555666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D1%83%20%D0%BF%D0%BE%20%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B5%20%F0%9F%99%82" target="_blank" aria-label="Бесплатная консультация в WhatsApp">
+  <a class="wa-consult" href="https://wa.me/77070555666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%83%20%D0%BF%D0%BE%20%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B5%20%F0%9F%99%82" target="_blank" aria-label="Бесплатная консультация в WhatsApp">
     <span class="wa-ic"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 27l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4h.01c6.6 0 11.99-5.4 11.99-12S22.6 3 16 3zm0 21.8h-.01c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 016.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.5-.3z"/></svg></span>
     <span class="wa-tx">Бесплатная консультация →</span>
   </a>
@@ -213,14 +214,14 @@ footer a{color:#fff;font-weight:700}
   <div>
     <span class="badge">🔴 Онлайн мастер-класс · 25 июля</span>
     <h1>Кем станет ваш ребёнок <span class="g">в будущем?</span></h1>
-    <p class="sub">Онлайн вебинар по Робототехнике для родителей школьников с 1 по 11 классы</p>
+    <p class="sub">Онлайн мастер-класс по робототехнике для родителей школьников 1–11 классов</p>
     <div class="tags">
       <span class="tag">🚀 Профессии будущего</span>
       <span class="tag">🤖 Робототехника</span>
       <span class="tag">🏆 Международные конкурсы</span>
     </div>
     <div class="cta-row">
-      <a class="btn pri big pulse hcta" href="#reg">Занять место на вебинаре →</a>
+      <a class="btn pri big pulse hcta" href="#reg">Занять место →</a>
     </div>
     <p class="price" style="margin-top:12px">Участие — 990 тг. Места ограничены</p>
   </div>
@@ -254,10 +255,10 @@ footer a{color:#fff;font-weight:700}
   <div class="who">
     <div class="who-head"><span class="eye">Кому подойдёт</span><h2>Для родителей, которые думают о будущем ребёнка</h2></div>
     <div class="who-grid">
-      <div class="wcard"><span class="wic" style="background:#EEE9FF">🎒</span><p>Детям <b>6–17 лет</b> (1–11 класс)</p></div>
-      <div class="wcard"><span class="wic" style="background:#FFEDE4">📱</span><p>Ребёнок «залипает» в телефоне — хотите увлечь полезным</p></div>
-      <div class="wcard"><span class="wic" style="background:#E4F7EE">🌍</span><p>Живёте <b>в любом городе</b> — формат онлайн</p></div>
-      <div class="wcard"><span class="wic" style="background:#FFF3D6">🧭</span><p>Хотите развивать ребёнка, но не знаете с чего начать</p></div>
+      <div class="wcard"><span class="wic" style="background:#EAE5FB">🎒</span><p>Детям <b>6–17 лет</b> (1–11 класс)</p></div>
+      <div class="wcard"><span class="wic" style="background:#E7ECFB">📱</span><p>Ребёнок «залипает» в телефоне — хотите увлечь полезным</p></div>
+      <div class="wcard"><span class="wic" style="background:#EFE9F8">🌍</span><p>Живёте <b>в любом городе</b> — формат онлайн</p></div>
+      <div class="wcard"><span class="wic" style="background:#F4E9F4">🧭</span><p>Хотите развивать ребёнка, но не знаете с чего начать</p></div>
     </div>
   </div>
 </div></section>
@@ -283,8 +284,8 @@ footer a{color:#fff;font-weight:700}
       <div class="role">Сооснователь RoLab</div>
       <div class="rlist">
         <span>📰 <b>Математик</b> с обложки Forbes</span>
-        <span>🏫 Со-основатель <b>Shanyraq Study</b></span>
-        <span>🎓 Обучил <b>более 30 000</b> школьников за 12 лет</span>
+        <span>🏫 Сооснователь <b>Shanyraq Study</b></span>
+        <span>🎓 <b>30 000+</b> учеников за 12 лет</span>
       </div>
     </div>
   </div>
