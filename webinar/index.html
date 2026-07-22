@@ -53,13 +53,13 @@ header:hover{opacity:1;background:rgba(246,244,255,.92)}
 @media(max-width:640px){.wa-consult .wa-tx{display:none}}
 
 /* hero */
-.hero{background:linear-gradient(160deg,var(--night),var(--night2));color:#fff;position:relative;overflow:hidden;border-radius:0 0 34px 34px}
+.hero{background:linear-gradient(160deg,var(--night),var(--night2));color:#fff;position:relative;overflow:hidden;border-radius:0 0 34px 34px;clip-path:inset(0 round 0 0 34px 34px)}
 .hero .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}
 .hero .b1{width:400px;height:400px;background:#7B5CFF;top:-130px;right:-70px}
 .hero .b2{width:320px;height:320px;background:#FF5A8A;bottom:-140px;left:-90px}
 .hero .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center;padding:44px 0 52px;position:relative;z-index:2}
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);color:#fff;font-weight:800;font-size:13px;padding:8px 15px;border-radius:30px;margin-bottom:16px}
-.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;margin-bottom:14px;text-wrap:balance}
+.hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;margin-bottom:14px;text-wrap:balance;color:#fff}
 .hero h1 .g{background:linear-gradient(90deg,#FFDA8A,#FF9EC4);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p.sub{color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,19px);max-width:52ch;margin-bottom:14px}
 .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
@@ -129,7 +129,7 @@ h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}
 .spk .rlist b{color:var(--ink)}
 
 /* register + kaspi */
-.reg{background:linear-gradient(160deg,var(--night),var(--night2));border-radius:28px;padding:clamp(28px,4vw,46px);color:#fff;position:relative;overflow:hidden}
+.reg{background:linear-gradient(160deg,var(--night),var(--night2));border-radius:28px;padding:clamp(28px,4vw,46px);color:#fff;position:relative;overflow:hidden;clip-path:inset(0 round 28px)}
 .reg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45}
 .reg .b1{width:340px;height:340px;background:#7B5CFF;top:-120px;left:-80px}
 .reg .inner{position:relative;z-index:2;max-width:520px;margin:0 auto;text-align:center}
@@ -237,21 +237,8 @@ footer a{color:#fff;font-weight:700}
   </div>
 </div></div></div>
 
-<!-- ПРОГРАММА / ТЕМЫ -->
-<section><div class="wrap">
-  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~40 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
-  <div class="prog">
-    <div class="pitem"><span class="n">01</span><div><b>К какой профессии будущего склонен ваш ребёнок</b><p>Определим по 3 признакам, к чему у ребёнка есть талант.</p></div></div>
-    <div class="pitem"><span class="n">02</span><div><b>Какие профессии будут востребованы через 10 лет</b><p>И почему важно начать в школьные годы, а не в вузе.</p></div></div>
-    <div class="pitem"><span class="n">03</span><div><b>Как развивать это дома — даже если вы не технарь</b><p>Простые шаги без давления и дорогих кружков.</p></div></div>
-    <div class="pitem"><span class="n">04</span><div><b>Как оторвать ребёнка от телефона</b><p>Переключить экран на созидание — сборку и 3D-печать.</p></div></div>
-    <div class="pitem"><span class="n">05</span><div><b>С чего начать в любом городе Казахстана</b><p>Понятный план обучения робототехнике онлайн.</p></div></div>
-    <div class="pitem"><span class="n">🎁</span><div><b>Подарок участникам мастер-класса</b><p>Расскажем, как его получить — только для тех, кто на встрече.</p></div></div>
-  </div>
-</div></section>
-
 <!-- КОМУ -->
-<section style="padding-top:0"><div class="wrap">
+<section><div class="wrap">
   <div class="who">
     <div class="who-head"><span class="eye">Кому подойдёт</span><h2>Для родителей, которые думают о будущем ребёнка</h2></div>
     <div class="who-grid">
@@ -289,6 +276,19 @@ footer a{color:#fff;font-weight:700}
         <span>🏛️ <b>100+ выпускников</b> в ТОП-10 университетов мира</span>
       </div>
     </div>
+  </div>
+</div></section>
+
+<!-- ПРОГРАММА / ТЕМЫ -->
+<section style="padding-top:0"><div class="wrap">
+  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~40 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
+  <div class="prog">
+    <div class="pitem"><span class="n">01</span><div><b>К какой профессии будущего склонен ваш ребёнок</b><p>Определим по 3 признакам, к чему у ребёнка есть талант.</p></div></div>
+    <div class="pitem"><span class="n">02</span><div><b>Какие профессии будут востребованы через 10 лет</b><p>И почему важно начать в школьные годы, а не в вузе.</p></div></div>
+    <div class="pitem"><span class="n">03</span><div><b>Как развивать это дома — даже если вы не технарь</b><p>Простые шаги без давления и дорогих кружков.</p></div></div>
+    <div class="pitem"><span class="n">04</span><div><b>Как оторвать ребёнка от телефона</b><p>Переключить экран на созидание — сборку и 3D-печать.</p></div></div>
+    <div class="pitem"><span class="n">05</span><div><b>С чего начать в любом городе Казахстана</b><p>Понятный план обучения робототехнике онлайн.</p></div></div>
+    <div class="pitem"><span class="n">🎁</span><div><b>Подарок участникам мастер-класса</b><p>Расскажем, как его получить — только для тех, кто на встрече.</p></div></div>
   </div>
 </div></section>
 
