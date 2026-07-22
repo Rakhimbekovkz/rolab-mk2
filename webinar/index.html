@@ -121,14 +121,15 @@ h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}
 .wcard .wic{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:23px}
 .wcard p{font-size:14.5px;line-height:1.4}
 
-/* expert */
-.expert{background:linear-gradient(135deg,#F1ECFF,#FFF0F5);border:1px solid var(--line);border-radius:24px;padding:34px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
-.expert .ava{width:120px;height:120px;border-radius:28px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:62px;flex:0 0 auto}
-.expert h3{font-size:22px}
-.expert .role{color:var(--brand);font-weight:700;font-size:14px;margin:2px 0 12px}
-.expert .achv{display:flex;flex-wrap:wrap;gap:9px}
-.expert .a{background:#fff;border:1px solid var(--line);border-radius:13px;padding:9px 13px;font-size:13.5px;color:var(--muted);box-shadow:0 6px 18px rgba(70,45,160,.08)}
-.expert .a b{color:var(--ink)}
+/* speakers */
+.speakers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.spk{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--sh);text-align:center}
+.spk .ph{width:140px;height:140px;border-radius:24px;margin:0 auto 14px;background-size:cover;background-position:center top;background-color:#EEE9FF;box-shadow:0 14px 32px rgba(70,45,160,.2)}
+.spk h3{font-size:20px;margin-bottom:2px}
+.spk .role{color:var(--brand);font-weight:700;font-size:13.5px;margin-bottom:14px}
+.spk .rlist{display:flex;flex-direction:column;gap:9px;text-align:left}
+.spk .rlist span{font-size:13.8px;color:var(--muted);line-height:1.45}
+.spk .rlist b{color:var(--ink)}
 
 /* register + kaspi */
 .reg{background:linear-gradient(160deg,var(--night),var(--night2));border-radius:28px;padding:clamp(28px,4vw,46px);color:#fff;position:relative;overflow:hidden}
@@ -181,8 +182,7 @@ footer a{color:#fff;font-weight:700}
   .g3{grid-template-columns:1fr}
   .prog{grid-template-columns:1fr}
   .who-grid{grid-template-columns:1fr}
-  .expert{grid-template-columns:1fr;text-align:center;padding:24px;gap:18px}
-  .expert .ava{margin:0 auto;width:96px;height:96px;font-size:50px}.expert ul{text-align:left}
+  .speakers{grid-template-columns:1fr}
   .reg{padding:26px 20px}
   .reg .frow{grid-template-columns:1fr}
   .reg h2{font-size:24px}
@@ -262,19 +262,28 @@ footer a{color:#fff;font-weight:700}
   </div>
 </div></section>
 
-<!-- ЭКСПЕРТ -->
+<!-- КТО ПРОВЕДЁТ -->
 <section style="padding-top:0"><div class="wrap">
-  <div class="expert">
-    <div class="ava">👨‍🏫</div>
-    <div>
-      <span class="eye">Кто ведёт</span>
-      <h3>Эксперты RoLab</h3>
-      <div class="role">9 лет в детском инженерном образовании</div>
-      <div class="achv">
-        <span class="a">🏆 <b>Грант $25 000</b> от Дурова</span>
-        <span class="a">🌍 Ученики — <b>чемпионы мира</b> FIRST</span>
-        <span class="a">🥇 Лучший <b>EdTech Евразии</b></span>
-        <span class="a">🎓 <b>500+ детей</b> прошли программы</span>
+  <div class="shead"><span class="eye">Кто проведёт</span><h2>Спикеры мастер-класса</h2><p>Основатели RoLab — 9 лет в детском инженерном образовании, их ученики становятся чемпионами мира.</p></div>
+  <div class="speakers">
+    <div class="spk">
+      <div class="ph" style="background-image:url('https://rakhimbekovkz.github.io/rolab-mk2/img/web/sabyrzhan.jpg')"></div>
+      <h3>Сабыржан Мустафин</h3>
+      <div class="role">Сооснователь RoLab</div>
+      <div class="rlist">
+        <span>🏆 <b>Грант $25 000</b> от Павла Дурова</span>
+        <span>🌍 Готовит <b>чемпионов мира</b> FIRST</span>
+        <span>🎓 <b>9 лет</b> в детском инженерном образовании</span>
+      </div>
+    </div>
+    <div class="spk">
+      <div class="ph" style="background-image:url('https://rakhimbekovkz.github.io/rolab-mk2/img/web/azat.jpg')"></div>
+      <h3>Азат Жасулан</h3>
+      <div class="role">Сооснователь RoLab</div>
+      <div class="rlist">
+        <span>🥇 Лучший <b>EdTech-стартап Евразии</b> (GESA)</span>
+        <span>🤖 <b>500+ детей</b> прошли наши программы</span>
+        <span>🚀 Эксперт по робототехнике и AI</span>
       </div>
     </div>
   </div>
