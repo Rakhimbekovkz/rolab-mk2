@@ -90,6 +90,7 @@ section{padding:clamp(44px,6vw,72px) 0}
 .eye{display:inline-flex;font-weight:800;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;padding:8px 15px;border-radius:30px;background:rgba(109,74,255,.1);color:var(--brand);margin-bottom:14px}
 h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}
 .shead p{color:var(--muted);font-size:17px;margin-top:12px}
+.hero p.sub,.shead p,.pitem p,.wcard p,.card p{text-wrap:pretty}
 
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh)}
@@ -163,15 +164,20 @@ footer{background:var(--night);color:rgba(255,255,255,.7);padding:26px 0;font-si
 footer .wrap{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 footer a{color:#fff;font-weight:700}
 
-.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;align-items:center;box-shadow:0 -8px 30px rgba(40,20,90,.12)}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;align-items:center;box-shadow:0 -8px 30px rgba(40,20,90,.12);transform:translateY(130%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.stick.show{transform:translateY(0)}
 .stick .p{font-weight:800;font-size:14px}.stick .p span{display:block;font-size:11px;color:var(--muted);font-weight:600}
 .stick .btn{flex:1;padding:14px}
 
 @media(max-width:860px){
-  .hero .grid{grid-template-columns:1fr;gap:22px;padding:26px 0 38px}
-  .hero h1{font-size:27px}
-  .hero p.sub{font-size:16px}
+  .hero .grid{grid-template-columns:1fr;gap:16px;padding:18px 0 26px}
+  .hero .grid>div:first-child{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .hero .badge{margin-bottom:12px}
+  .hero h1{font-size:26px;margin-bottom:10px}
+  .hero p.sub{font-size:15px;margin-bottom:14px}
+  .hero .tags{justify-content:center;margin-bottom:16px}
   .hero .hcta{max-width:none}
+  .hero .price{text-align:center}
   .g3{grid-template-columns:1fr}
   .prog{grid-template-columns:1fr}
   .who-grid{grid-template-columns:1fr}
@@ -346,6 +352,8 @@ window.addEventListener('scroll',()=>{
   hdr.classList.toggle('dim', y>lastY && y>160);
   lastY=y;
 },{passive:true});
+/* липкая кнопка снизу — появляется через 10 секунд, чтобы не перегружать первый экран */
+setTimeout(()=>{const s=document.querySelector('.stick');if(s)s.classList.add('show');},10000);
 /* submit -> capture -> Kaspi */
 document.getElementById('pay').addEventListener('click',()=>{
   const name=(document.getElementById('f_name').value||'').trim();
