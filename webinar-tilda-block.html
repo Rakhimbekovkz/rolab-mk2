@@ -1,0 +1,205 @@
+<div class="rmk">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");.rmk *{box-sizing:border-box}.rmk{width:100%;overflow-x:hidden}.rmk h1,.rmk h2,.rmk h3{color:var(--ink)}.rmk section{border:0}.rmk a{color:inherit;text-decoration:none}.rmk img{max-width:100%}
+.rmk *{margin:0;padding:0;box-sizing:border-box}.rmk{
+  --bg:#F6F4FF;--ink:#1A1636;--muted:#655E86;--line:#E9E4FA;--card:#fff;
+  --brand:#6D4AFF;--brand2:#9B7BFF;--coral:#FF5A3D;--coral2:#FF3D7E;--kaspi:#F14635;--wa:#25D366;
+  --night:#191248;--night2:#2A1E6E;
+  --grad:linear-gradient(135deg,#6D4AFF,#9B7BFF 55%,#FF6AA0);
+  --grad-cta:linear-gradient(135deg,#FF8A3D,#FF3D7E);
+  --sh:0 20px 55px rgba(70,45,160,.14);
+}.rmk{font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}.rmk{background:var(--bg)}.rmk h1,.rmk h2,.rmk h3{letter-spacing:-.02em;line-height:1.12}.rmk button,.rmk a{font-family:inherit;cursor:pointer}.rmk a{text-decoration:none;color:inherit}.rmk .wrap{max-width:1080px;margin:0 auto;padding:0 20px}.rmk .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:17px;padding:16px 30px;border-radius:15px;border:none;transition:transform .14s,box-shadow .14s;white-space:nowrap}.rmk .btn.pri{background:var(--grad-cta);color:#fff;box-shadow:0 16px 36px rgba(255,77,110,.36)}.rmk .btn.pri:hover{transform:translateY(-2px)}.rmk .btn.big{font-size:18px;padding:18px 34px;width:100%}.rmk .btn.kaspi{background:var(--kaspi);color:#fff;box-shadow:0 14px 32px rgba(241,70,53,.36)}.rmk .btn.kaspi:hover{transform:translateY(-2px)}.rmk .btn.wa{background:var(--wa);color:#fff;box-shadow:0 14px 32px rgba(37,211,102,.34)}.rmk .btn.wa:hover{transform:translateY(-2px)}.rmk .pulse{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 14px 34px rgba(255,77,110,.4)}50%{box-shadow:0 16px 48px rgba(255,90,61,.6),0 0 26px 6px rgba(255,138,61,.4)}}.rmk /* header */
+header{position:sticky;top:0;z-index:50;background:rgba(246,244,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:opacity .35s,transform .35s,background .35s,box-shadow .35s}.rmk header.scrolled{background:rgba(246,244,255,.6);box-shadow:0 8px 26px rgba(40,20,90,.10)}.rmk header.dim{opacity:.45}.rmk header:hover{opacity:1;background:rgba(246,244,255,.92)}.rmk .nav{display:flex;align-items:center;height:62px;gap:12px}.rmk .lg{font-weight:800;font-size:17px;display:flex;align-items:center;gap:9px}.rmk .lg .m{width:34px;height:34px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:18px}.rmk .wa-consult{margin:0 auto;display:inline-flex;align-items:center;gap:9px}.rmk .wa-consult .wa-ic{width:32px;height:32px;border-radius:10px;background:var(--wa);display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:0 6px 16px rgba(37,211,102,.34)}.rmk .wa-consult .wa-ic svg{width:18px;height:18px;fill:#fff}.rmk .wa-consult .wa-tx{font-weight:700;font-size:13px;color:#12945B;white-space:nowrap}.rmk .wa-consult:hover .wa-tx{text-decoration:underline}.rmk .nav .btn{padding:10px 18px;font-size:14px}@media(max-width:560px){.rmk .lg span{display:none}}@media(max-width:640px){.rmk .wa-consult .wa-tx{display:none}}.rmk /* hero */
+.hero{background:linear-gradient(160deg,var(--night),var(--night2));color:#fff;position:relative;overflow:hidden;border-radius:0 0 34px 34px}.rmk .hero .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}.rmk .hero .b1{width:400px;height:400px;background:#7B5CFF;top:-130px;right:-70px}.rmk .hero .b2{width:320px;height:320px;background:#FF5A8A;bottom:-140px;left:-90px}.rmk .hero .grid{display:grid;grid-template-columns:1.12fr .88fr;gap:40px;align-items:center;padding:44px 0 52px;position:relative;z-index:2}.rmk .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);color:#fff;font-weight:800;font-size:13px;padding:8px 15px;border-radius:30px;margin-bottom:16px}.rmk .hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;margin-bottom:14px;text-wrap:balance}.rmk .hero h1 .g{background:linear-gradient(90deg,#FFDA8A,#FF9EC4);-webkit-background-clip:text;background-clip:text;color:transparent}.rmk .hero p.sub{color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,19px);max-width:52ch;margin-bottom:14px}.rmk .hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}.rmk .hero .tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;font-weight:700;font-size:13px;padding:7px 13px;border-radius:30px}.rmk .learn{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}.rmk .learn div{display:flex;align-items:flex-start;gap:11px;font-size:15.5px}.rmk .learn div .c{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:1px}.rmk .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.rmk .hero .hcta{width:100%;max-width:340px}.rmk .hero .price{font-size:14px;color:rgba(255,255,255,.85)}.rmk .hero .price b{color:#fff;font-size:16px}.rmk .hero .price s{opacity:.6}.rmk /* event card */
+.ecard{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:24px;backdrop-filter:blur(8px)}.rmk .ecard .row{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}.rmk .ecard .row:last-of-type{border-bottom:none}.rmk .ecard .ic{width:42px;height:42px;flex:0 0 auto;border-radius:12px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:22px}.rmk .ecard .row b{display:block;font-size:16px}.rmk .ecard .row span{font-size:13px;color:rgba(255,255,255,.75)}.rmk .cd{display:flex;gap:8px;margin:18px 0 4px;justify-content:center}.rmk .cd .u{background:rgba(255,255,255,.12);border-radius:12px;padding:9px 4px;min-width:58px;text-align:center}.rmk .cd .u b{display:block;font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}.rmk .cd .u span{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:rgba(255,255,255,.7)}.rmk section{padding:clamp(44px,6vw,72px) 0}.rmk .shead{text-align:center;max-width:720px;margin:0 auto 34px}.rmk .eye{display:inline-flex;font-weight:800;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;padding:8px 15px;border-radius:30px;background:rgba(109,74,255,.1);color:var(--brand);margin-bottom:14px}.rmk h2{font-size:clamp(24px,3.6vw,34px);font-weight:800;text-wrap:balance}.rmk .shead p{color:var(--muted);font-size:17px;margin-top:12px}.rmk .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.rmk .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh)}.rmk .card .ic{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:14px}.rmk .card:nth-child(1) .ic{background:#EEE9FF}.rmk .card:nth-child(2) .ic{background:#FFEDE4}.rmk .card:nth-child(3) .ic{background:#E4F7EE}.rmk .card h3{font-size:19px;margin-bottom:7px}.rmk .card p{color:var(--muted);font-size:15px}.rmk /* program */
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rmk .pitem{display:flex;gap:15px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:var(--sh);align-items:flex-start}.rmk .pitem .n{flex:0 0 auto;font-weight:800;font-size:15px;color:#fff;background:var(--grad);width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center}.rmk .pitem b{display:block;font-size:16.5px;margin-bottom:3px;line-height:1.25}.rmk .pitem p{color:var(--muted);font-size:14.5px}.rmk .pitem:nth-child(1){background:#F3F0FF}.rmk .pitem:nth-child(2){background:#FFF1EC}.rmk .pitem:nth-child(3){background:#E9F9F1}.rmk .pitem:nth-child(4){background:#EAF2FF}.rmk .pitem:nth-child(5){background:#FFF6E0}.rmk .pitem:nth-child(6){background:#FFEDF4}.rmk /* for whom */
+.who{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3vw,36px);box-shadow:var(--sh)}.rmk .who-head{text-align:center;max-width:580px;margin:0 auto 22px}.rmk .who-head h2{margin-top:6px}.rmk .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.rmk .wcard{display:flex;gap:13px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:15px 17px}.rmk .wcard .wic{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:23px}.rmk .wcard p{font-size:14.5px;line-height:1.4}.rmk /* expert */
+.expert{background:linear-gradient(135deg,#F1ECFF,#FFF0F5);border:1px solid var(--line);border-radius:24px;padding:34px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}.rmk .expert .ava{width:120px;height:120px;border-radius:28px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:62px;flex:0 0 auto}.rmk .expert h3{font-size:22px}.rmk .expert .role{color:var(--brand);font-weight:700;font-size:14px;margin:2px 0 12px}.rmk .expert .achv{display:flex;flex-wrap:wrap;gap:9px}.rmk .expert .a{background:#fff;border:1px solid var(--line);border-radius:13px;padding:9px 13px;font-size:13.5px;color:var(--muted);box-shadow:0 6px 18px rgba(70,45,160,.08)}.rmk .expert .a b{color:var(--ink)}.rmk /* register + kaspi */
+.reg{background:linear-gradient(160deg,var(--night),var(--night2));border-radius:28px;padding:clamp(28px,4vw,46px);color:#fff;position:relative;overflow:hidden}.rmk .reg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45}.rmk .reg .b1{width:340px;height:340px;background:#7B5CFF;top:-120px;left:-80px}.rmk .reg .inner{position:relative;z-index:2;max-width:520px;margin:0 auto;text-align:center}.rmk .reg h2{color:#fff;margin-bottom:8px}.rmk .reg .sub{color:rgba(255,255,255,.85);margin-bottom:8px}.rmk .reg .pricetag{display:inline-flex;align-items:baseline;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:10px 18px;margin:14px 0 22px}.rmk .reg .pricetag b{font-size:26px;font-weight:800}.rmk .reg .pricetag span{font-size:13px;color:rgba(255,255,255,.8)}.rmk .reg form{display:flex;flex-direction:column;gap:12px;text-align:left}.rmk .reg .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.rmk .reg input,.rmk .reg select{width:100%;border:1.5px solid rgba(255,255,255,.22);border-radius:13px;padding:14px 16px;font-size:16px;font-family:inherit;background:rgba(255,255,255,.08);color:#fff}.rmk .reg input::placeholder{color:rgba(255,255,255,.55)}.rmk .reg input:focus,.rmk .reg select:focus{outline:none;border-color:#fff}.rmk .reg select{color:#fff}.rmk .reg select option{color:#000}.rmk .reg .err{display:none;color:#FFB4B4;font-size:13px;font-weight:700}.rmk .reg .slotlbl{font-size:13px;color:rgba(255,255,255,.8);font-weight:700;margin-bottom:-2px}.rmk .reg .slots{display:grid;grid-template-columns:1fr 1fr;gap:12px}.rmk .reg .slot{cursor:pointer}.rmk .reg .slot input{position:absolute;opacity:0;pointer-events:none}.rmk .reg .slot span{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:13px;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);font-weight:800;font-size:16px;transition:.15s}.rmk .reg .slot input:checked+span{border-color:#fff;background:rgba(255,255,255,.2);box-shadow:0 0 0 3px rgba(255,255,255,.14)}.rmk .reg .note{font-size:12px;color:rgba(255,255,255,.65);margin-top:12px;text-align:center}.rmk .reg .kaspinote{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:rgba(255,255,255,.85);margin-top:14px}.rmk .reg .kaspinote b{background:#fff;color:var(--kaspi);border-radius:6px;padding:2px 8px;font-weight:800}.rmk .done{display:none;text-align:center}.rmk .done.on{display:block}.rmk .done .em{font-size:56px;margin-bottom:8px}.rmk footer{background:var(--night);color:rgba(255,255,255,.7);padding:26px 0;font-size:13px}.rmk footer .wrap{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.rmk footer a{color:#fff;font-weight:700}.rmk .stick{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 14px;display:none;gap:10px;align-items:center;box-shadow:0 -8px 30px rgba(40,20,90,.12)}.rmk .stick .p{font-weight:800;font-size:14px}.rmk .stick .p span{display:block;font-size:11px;color:var(--muted);font-weight:600}.rmk .stick .btn{flex:1;padding:14px}@media(max-width:860px){.rmk .hero .grid{grid-template-columns:1fr;gap:22px;padding:26px 0 38px}.rmk .hero h1{font-size:27px}.rmk .hero p.sub{font-size:16px}.rmk .hero .hcta{max-width:none}.rmk .g3{grid-template-columns:1fr}.rmk .prog{grid-template-columns:1fr}.rmk .who-grid{grid-template-columns:1fr}.rmk .expert{grid-template-columns:1fr;text-align:center;padding:24px;gap:18px}.rmk .expert .ava{margin:0 auto;width:96px;height:96px;font-size:50px}.rmk .expert ul{text-align:left}.rmk .reg{padding:26px 20px}.rmk .reg .frow{grid-template-columns:1fr}.rmk .reg h2{font-size:24px}.rmk section{padding:40px 0}.rmk .shead{margin-bottom:24px}.rmk .stick{display:flex}.rmk{padding-bottom:76px}.rmk .cta-row .btn{width:100%}
+}@media(max-width:400px){.rmk .cd .u{min-width:0;flex:1;padding:9px 2px}.rmk .cd .u b{font-size:19px}
+}
+</style>
+
+<!-- Meta Pixel 601308563055942 стоит site-wide в Tilda (PageView оттуда). Здесь только событие Lead/InitiateCheckout из JS (fbq guarded). -->
+
+<header><div class="wrap nav">
+  <div class="lg"><span class="m">🎓</span><span>Shanyraq Study × RoLab</span></div>
+  <a class="wa-consult" href="https://wa.me/77070555666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%83%D1%8E%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D0%B2%D0%B5%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D1%83%20%D0%BF%D0%BE%20%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B5%20%F0%9F%99%82" target="_blank" aria-label="Бесплатная консультация в WhatsApp">
+    <span class="wa-ic"><svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 27l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4h.01c6.6 0 11.99-5.4 11.99-12S22.6 3 16 3zm0 21.8h-.01c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 016.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.5-.3z"/></svg></span>
+    <span class="wa-tx">Бесплатная консультация →</span>
+  </a>
+  <a class="btn pri" href="#reg">Записаться</a>
+</div></header>
+
+<!-- HERO -->
+<div class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap"><div class="grid">
+  <div>
+    <span class="badge">🔴 Онлайн мастер-класс · 25 июля</span>
+    <h1>Кем станет ваш ребёнок <span class="g">в будущем?</span></h1>
+    <p class="sub">Онлайн вебинар по Робототехнике для родителей школьников с 1 по 11 классы</p>
+    <div class="tags">
+      <span class="tag">🚀 Профессии будущего</span>
+      <span class="tag">🤖 Робототехника</span>
+      <span class="tag">🏆 Международные конкурсы</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn pri big pulse hcta" href="#reg">Занять место на вебинаре →</a>
+    </div>
+    <p class="price" style="margin-top:12px">Участие <b>990 ₸</b> — <b style="color:#fff">зачтём при покупке курса</b>, по сути бесплатно</p>
+  </div>
+  <div>
+    <div class="ecard">
+      <div class="row"><span class="ic">📅</span><div><b>25 июля · 15:00 или 20:00</b><span>два потока на выбор, время Астаны</span></div></div>
+      <div class="row"><span class="ic">💻</span><div><b>Онлайн, из любого города</b><span>ссылка придёт в WhatsApp</span></div></div>
+      <div class="row"><span class="ic">⏱</span><div><b>~40 минут + ответы</b><span>с живым разбором в чате</span></div></div>
+      <div class="row"><span class="ic">🎁</span><div><b>Подарок участникам</b><span>только для тех, кто на мастер-классе</span></div></div>
+      <div class="cd" id="cd"></div>
+      <div style="text-align:center;font-size:12px;color:rgba(255,255,255,.65);margin-top:6px">до старта мастер-класса</div>
+    </div>
+  </div>
+</div></div></div>
+
+<!-- ПРОГРАММА / ТЕМЫ -->
+<section><div class="wrap">
+  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~40 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
+  <div class="prog">
+    <div class="pitem"><span class="n">01</span><div><b>К какой профессии будущего склонен ваш ребёнок</b><p>Определим по 3 признакам, к чему у ребёнка есть талант.</p></div></div>
+    <div class="pitem"><span class="n">02</span><div><b>Какие профессии будут востребованы через 10 лет</b><p>И почему важно начать в школьные годы, а не в вузе.</p></div></div>
+    <div class="pitem"><span class="n">03</span><div><b>Как развивать это дома — даже если вы не технарь</b><p>Простые шаги без давления и дорогих кружков.</p></div></div>
+    <div class="pitem"><span class="n">04</span><div><b>Как оторвать ребёнка от телефона</b><p>Переключить экран на созидание — сборку и 3D-печать.</p></div></div>
+    <div class="pitem"><span class="n">05</span><div><b>С чего начать в любом городе Казахстана</b><p>Понятный план обучения робототехнике онлайн.</p></div></div>
+    <div class="pitem"><span class="n">🎁</span><div><b>Подарок участникам мастер-класса</b><p>Расскажем, как его получить — только для тех, кто на встрече.</p></div></div>
+  </div>
+</div></section>
+
+<!-- КОМУ -->
+<section style="padding-top:0"><div class="wrap">
+  <div class="who">
+    <div class="who-head"><span class="eye">Кому подойдёт</span><h2>Для родителей, которые думают о будущем ребёнка</h2></div>
+    <div class="who-grid">
+      <div class="wcard"><span class="wic" style="background:#EEE9FF">🎒</span><p>Детям <b>6–17 лет</b> (1–11 класс)</p></div>
+      <div class="wcard"><span class="wic" style="background:#FFEDE4">📱</span><p>Ребёнок «залипает» в телефоне — хотите увлечь полезным</p></div>
+      <div class="wcard"><span class="wic" style="background:#E4F7EE">🌍</span><p>Живёте <b>в любом городе</b> — формат онлайн</p></div>
+      <div class="wcard"><span class="wic" style="background:#FFF3D6">🧭</span><p>Хотите развивать ребёнка, но не знаете с чего начать</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ЭКСПЕРТ -->
+<section style="padding-top:0"><div class="wrap">
+  <div class="expert">
+    <div class="ava">👨‍🏫</div>
+    <div>
+      <span class="eye">Кто ведёт</span>
+      <h3>Эксперты RoLab</h3>
+      <div class="role">9 лет в детском инженерном образовании</div>
+      <div class="achv">
+        <span class="a">🏆 <b>Грант $25 000</b> от Дурова</span>
+        <span class="a">🌍 Ученики — <b>чемпионы мира</b> FIRST</span>
+        <span class="a">🥇 Лучший <b>EdTech Евразии</b></span>
+        <span class="a">🎓 <b>500+ детей</b> прошли программы</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- РЕГИСТРАЦИЯ + KASPI -->
+<section id="reg" style="padding-top:0"><div class="wrap">
+  <div class="reg"><div class="blob b1"></div>
+    <div class="inner">
+      <span class="eye" style="background:rgba(255,255,255,.14);color:#fff">Бронь места</span>
+      <h2>Забронируйте место на мастер-классе</h2>
+      <p class="sub">25 июля · онлайн · места ограничены</p>
+      <div class="pricetag"><b>990 ₸</b><span>зачтём при покупке курса</span></div>
+
+      <form id="form" onsubmit="return false">
+        <div class="err" id="err">Заполните имя и корректный номер</div>
+        <div class="slotlbl">Выберите удобный поток 25 июля</div>
+        <div class="slots">
+          <label class="slot"><input type="radio" name="slot" value="15:00" checked><span>🕒 15:00</span></label>
+          <label class="slot"><input type="radio" name="slot" value="20:00"><span>🌙 20:00</span></label>
+        </div>
+        <input id="f_name" placeholder="Ваше имя" autocomplete="name">
+        <div class="frow">
+          <select id="f_city"><option value="">Город</option><option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Караганда</option><option>Другой город</option></select>
+          <select id="f_class"><option value="">Класс ребёнка</option><option>1 класс</option><option>2 класс</option><option>3 класс</option><option>4 класс</option><option>5 класс</option><option>6 класс</option><option>7 класс</option><option>8 класс</option><option>9 класс</option><option>10 класс</option><option>11 класс</option><option>Ещё не в школе</option></select>
+        </div>
+        <input id="f_phone" placeholder="WhatsApp номер" inputmode="tel" autocomplete="tel">
+        <button class="btn kaspi big" id="pay">Оплатить 990 ₸ через Kaspi</button>
+      </form>
+      <div class="kaspinote"><b>Kaspi</b> Оплата в приложении Kaspi.kz — быстро и безопасно</div>
+      <p class="note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Ссылка на мастер-класс придёт в WhatsApp.</p>
+
+      <div class="done" id="done">
+        <div class="em">🎉</div>
+        <h2>Остался последний шаг</h2>
+        <div id="slotconf" style="display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);border-radius:12px;padding:8px 16px;font-weight:700;margin:6px 0 14px"></div>
+        <p class="sub" style="text-align:left;max-width:420px;margin:0 auto 4px">
+          <b style="color:#fff">1.</b> Оплатите 990 ₸ в Kaspi (кнопка ниже).<br>
+          <b style="color:#fff">2.</b> Отправьте чек нам в WhatsApp — пришлём ссылку на мастер-класс и напомним перед стартом.
+        </p>
+        <a class="btn kaspi big" id="paylink" href="#" target="_blank" style="margin-top:18px">Оплатить 990 ₸ в Kaspi →</a>
+        <a class="btn wa big" href="https://wa.me/77070555666?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%AF%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B8%D0%BB%28%D0%B0%29%20%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%B8%D0%B5%20%D0%B2%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B5%2025%20%D0%B8%D1%8E%D0%BB%D1%8F%2C%20%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%20%D1%87%D0%B5%D0%BA%20%D0%BE%D0%B1%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%20%F0%9F%91%87" target="_blank" style="margin-top:11px">Отправить чек в WhatsApp →</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© 2026 Shanyraq Study × RoLab · Онлайн мастер-класс «Кем станет ваш ребёнок?»</span>
+  <span style="margin-left:auto"><a href="https://wa.me/77070555666" target="_blank">WhatsApp</a></span>
+</div></footer>
+
+<div class="stick">
+  <div class="p">990 ₸<span>зачтём в курс</span></div>
+  <a class="btn pri" href="#reg">Забронировать место</a>
+</div>
+
+<script>
+const CONFIG={
+  crmBase:'https://shanyraqstudy.bitrix24.kz/rest/11/6akcz7qfa3p2318n/',
+  dealCategory:21, dealStage:'C21:NEW', assignedById:19,
+  kaspiLink:'https://pay.kaspi.kz/pay/knb8eiga' /* оплата Kaspi Pay, 990 ₸ */
+};
+/* countdown — до старта первого потока */
+const target=new Date('2026-07-25T15:00:00+05:00').getTime();
+function tick(){const d=target-Date.now();const dd=Math.max(0,Math.floor(d/864e5)),hh=Math.max(0,Math.floor(d%864e5/36e5)),mm=Math.max(0,Math.floor(d%36e5/6e4)),ss=Math.max(0,Math.floor(d%6e4/1e3));
+  document.getElementById('cd').innerHTML='<div class="u"><b>'+dd+'</b><span>дней</span></div><div class="u"><b>'+String(hh).padStart(2,'0')+'</b><span>часов</span></div><div class="u"><b>'+String(mm).padStart(2,'0')+'</b><span>мин</span></div><div class="u"><b>'+String(ss).padStart(2,'0')+'</b><span>сек</span></div>';}
+tick();setInterval(tick,1000);
+/* умная шапка: тень при скролле + полуисчезает при прокрутке вниз, возвращается вверх/при наведении */
+const hdr=document.querySelector('.rmk header');
+let lastY=window.scrollY;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  hdr.classList.toggle('scrolled', y>30);
+  hdr.classList.toggle('dim', y>lastY && y>160);
+  lastY=y;
+},{passive:true});
+/* submit -> capture -> Kaspi */
+document.getElementById('pay').addEventListener('click',()=>{
+  const name=(document.getElementById('f_name').value||'').trim();
+  const city=document.getElementById('f_city').value;
+  const klass=document.getElementById('f_class').value;
+  const phone=(document.getElementById('f_phone').value||'').trim();
+  const slotEl=document.querySelector('input[name="slot"]:checked');
+  const slot=slotEl?slotEl.value:'15:00';
+  if(name.length<2||phone.replace(/\D/g,'').length<10){document.getElementById('err').style.display='block';return;}
+  try{if(window.fbq){fbq('track','Lead');fbq('track','InitiateCheckout');}}catch(e){}
+  if(CONFIG.crmBase){
+    const pr=new URLSearchParams(location.search),utm={};
+    ['source','medium','campaign','content','term'].forEach(k=>{const v=pr.get('utm_'+k);if(v)utm['UTM_'+k.toUpperCase()]=v});
+    if(!utm.UTM_SOURCE)utm.UTM_SOURCE='landing-webinar';
+    const api=(m,f)=>fetch(CONFIG.crmBase+m,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:f})}).then(r=>r.json());
+    const srcDesc='Вебинар 25 июля '+slot+' · '+city+' · '+klass+' · оплата 990₸ (ожидает)';
+    api('crm.contact.add.json',{NAME:name,PHONE:[{VALUE:phone,VALUE_TYPE:'WORK'}],ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',SOURCE_DESCRIPTION:srcDesc,OPENED:'Y'})
+      .then(r=>{const f=Object.assign({TITLE:'Вебинар 25.07 '+slot+' — '+name,CATEGORY_ID:CONFIG.dealCategory,STAGE_ID:CONFIG.dealStage,ASSIGNED_BY_ID:CONFIG.assignedById,SOURCE_ID:'WEB',SOURCE_DESCRIPTION:srcDesc,OPENED:'Y',COMMENTS:'Тел: '+phone+' | Город: '+city+' | Класс: '+klass+' | Поток: '+slot+' | Вебинар 25.07, оплата 990₸ ожидает'},utm);if(r&&r.result)f.CONTACT_ID=r.result;return api('crm.deal.add.json',f)}).catch(()=>{});
+  }
+  document.getElementById('form').style.display='none';
+  const sc=document.getElementById('slotconf'); if(sc) sc.textContent='Ваш поток: 25 июля, '+slot;
+  const dn=document.getElementById('done'); dn.classList.add('on');
+  document.getElementById('paylink').href=CONFIG.kaspiLink;
+  if(CONFIG.kaspiLink && CONFIG.kaspiLink!=='#') window.open(CONFIG.kaspiLink,'_blank');
+});
+</script>
+</div>
