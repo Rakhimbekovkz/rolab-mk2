@@ -53,7 +53,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(246,244,255,.86);backdro
 .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);color:#fff;font-weight:800;font-size:13px;padding:8px 15px;border-radius:30px;margin-bottom:16px}
 .hero h1{font-size:clamp(28px,4.4vw,44px);font-weight:800;margin-bottom:14px;text-wrap:balance}
 .hero h1 .g{background:linear-gradient(90deg,#FFDA8A,#FF9EC4);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.sub{color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,19px);max-width:52ch;margin-bottom:22px}
+.hero p.sub{color:rgba(255,255,255,.9);font-size:clamp(16px,2vw,19px);max-width:52ch;margin-bottom:14px}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero .tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;font-weight:700;font-size:13px;padding:7px 13px;border-radius:30px}
 .learn{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
 .learn div{display:flex;align-items:flex-start;gap:11px;font-size:15.5px}
 .learn div .c{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:1px}
@@ -186,7 +188,12 @@ footer a{color:#fff;font-weight:700}
   <div>
     <span class="badge">🔴 Онлайн мастер-класс · 25 июля</span>
     <h1>Кем станет ваш ребёнок <span class="g">в будущем?</span></h1>
-    <p class="sub">Онлайн мастер-класс для родителей детей 6–17 лет: профессии будущего, робототехника и как развивать талант ребёнка из любого города Казахстана.</p>
+    <p class="sub">Онлайн вебинар по Робототехнике для родителей школьников с 1 по 11 классы</p>
+    <div class="tags">
+      <span class="tag">🚀 Профессии будущего</span>
+      <span class="tag">🤖 Робототехника</span>
+      <span class="tag">🏆 Международные конкурсы</span>
+    </div>
     <div class="cta-row">
       <a class="btn pri big pulse hcta" href="#reg">Забронировать место →</a>
     </div>
@@ -196,7 +203,7 @@ footer a{color:#fff;font-weight:700}
     <div class="ecard">
       <div class="row"><span class="ic">📅</span><div><b>25 июля · 15:00 или 20:00</b><span>два потока на выбор, время Астаны</span></div></div>
       <div class="row"><span class="ic">💻</span><div><b>Онлайн, из любого города</b><span>ссылка придёт в WhatsApp</span></div></div>
-      <div class="row"><span class="ic">⏱</span><div><b>~60 минут + ответы</b><span>с живым разбором в чате</span></div></div>
+      <div class="row"><span class="ic">⏱</span><div><b>~40 минут + ответы</b><span>с живым разбором в чате</span></div></div>
       <div class="row"><span class="ic">🎁</span><div><b>Подарок участникам</b><span>только для тех, кто на мастер-классе</span></div></div>
       <div class="cd" id="cd"></div>
       <div style="text-align:center;font-size:12px;color:rgba(255,255,255,.65);margin-top:6px">до старта мастер-класса</div>
@@ -206,7 +213,7 @@ footer a{color:#fff;font-weight:700}
 
 <!-- ПРОГРАММА / ТЕМЫ -->
 <section><div class="wrap">
-  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~60 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
+  <div class="shead"><span class="eye">Программа</span><h2>Какие темы мы раскроем на мастер-классе</h2><p>За ~40 минут пройдём путь от «с чего начать» до понятного плана для вашего ребёнка.</p></div>
   <div class="prog">
     <div class="pitem"><span class="n">01</span><div><b>К какой профессии будущего склонен ваш ребёнок</b><p>Определим по 3 признакам, к чему у ребёнка есть талант.</p></div></div>
     <div class="pitem"><span class="n">02</span><div><b>Какие профессии будут востребованы через 10 лет</b><p>И почему важно начать в школьные годы, а не в вузе.</p></div></div>
